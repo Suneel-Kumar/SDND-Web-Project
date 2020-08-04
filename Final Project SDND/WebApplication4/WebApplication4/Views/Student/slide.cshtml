@@ -1,0 +1,261 @@
+﻿
+<link href="~/slide_css.css" rel="stylesheet" />
+<style>
+ 
+</style>
+
+<script>
+
+    var score = 0;
+    var total = 5;
+    var point = 1;
+    var highest = total + point;
+
+    function init(){
+        sessionStorage.setItem('a1', 'b');
+        sessionStorage.setItem('a2', 'd');
+        sessionStorage.setItem('a3', 'c');
+        sessionStorage.setItem('a4', 'a');
+        sessionStorage.setItem('a5', 'b');
+
+}
+
+
+    $(onload).ready(function () {
+        $('.questionForm').hide();
+        $('#q1').show();
+
+        $('#q1 #change').click(function () {
+            $('.questionForm').hide();
+            $('#q2').fadeIn(300);
+            return false;
+        })
+
+        $('#q2 #change').click(function () {
+            $('.questionForm').hide();
+            $('#q3').fadeIn(300);
+            return false;
+        })
+
+        $('#q3 #change').click(function () {
+            $('.questionForm').hide();
+            $('#q4').fadeIn(300);
+            return false;
+        })
+
+        $('#q4 #change').click(function () {
+            $('.questionForm').hide();
+            $('#q5').fadeIn(300);
+            return false;
+        })
+
+        $('#q5 #change').click(function () {
+            $('.questionForm').hide();
+            $('#result').fadeIn(300);
+            return false;
+        })
+
+
+
+    })
+
+    function process(q) {
+        if (q === 'q1') {
+            var submitted = $('input[name=q1] : checked').val();
+            if (submitted == sessionStorage.a1) {
+                score++;
+            }
+        }
+
+        if (q === 'q2') {
+            var submitted = $('input[name=q2] : checked').val();
+            if (submitted == sessionStorage.a1) {
+                score++;
+            }
+        }
+
+        if (q === 'q3') {
+            var submitted = $('input[name=q1] : checked').val();
+            if (submitted == sessionStorage.a1) {
+                score++;
+            }
+        }
+
+        if (q === 'q4') {
+            var submitted = $('input[name=q1] : checked').val();
+            if (submitted == sessionStorage.a1) {
+                score++;
+            }
+        }
+
+        if (q === 'q5') {
+            var submitted = $('input[name=q1] : checked').val();
+            if (submitted == sessionStorage.a1) {
+                score++;
+            }
+        }
+    }
+    window.addEventListener('load', init, false);
+
+
+</script>
+
+         <style>
+             li{
+                 list-style : none;
+                 padding : 4px;
+             }
+
+             header{
+                 background-color : #1f88f4;
+                 color : #ffffff;
+                 padding : 5px 12px ;
+                 overflow : auto;
+                 font-size : 20px
+             }
+
+         </style>
+
+<div id="bb">
+
+
+    <div class="container">
+        <header>
+            <div>Quiz</div>
+        </header>
+        <main>
+            <form class="questionForm" id="q1" data-question="1">
+            <h3 class="p-3">1. Which tag should be used to represent the header of a document ?</h3>
+            <ul class="m-3">
+                <li><input type="radio" name="q1" value="a"/>&lt;head&gt;</li>
+                <li><input type="radio" name="q1" value="b" />&lt;header&gt;</li>
+                <li><input type="radio" name="q1" value="c" />&lt;heading&gt;</li>
+                <li><input type="radio" name="q1" value="d" />&lt;main&gt;</li>
+
+                    <div id="ii" class="m-3">
+                        <input type="button" class="btn btn-info change second" id="change" data-url="/Student/quiz" value="NEXT" onclick="fun()">
+                    </div> 
+            </ul>
+            </form>
+
+
+            <form class="questionForm" id="q2" data-question="2">
+                <h3 class="p-3">2. Which of the following is NOT a new feature of HTML5 ?</h3>
+                <ul class="m-3">
+                    <li><input type="radio" name="q2" value="a" />New Media Elements</li>
+                    <li><input type="radio" name="q2" value="b" />Form Input Types</li>
+                    <li><input type="radio" name="q2" value="c" />Local Storage</li>
+                    <li><input type="radio" name="q2" value="d" />Cookies</li>
+
+                    <div id="ii" class="m-3">
+                        <input type="button" class="btn btn-info change second" id="change" data-url="/Student/quiz" value="NEXT" onclick="fun()">
+                    </div>
+                </ul>
+            </form>
+
+
+            <form class="questionForm" id="q3" data-question="3">
+                <h3 class="p-3">3. Which element is the most appropriate to wrap around each blog post on a page ?</h3>
+                <ul class="m-3">
+                    <li><input type="radio" name="q3" value="a" />&lt;section&gt;</li>
+                    <li><input type="radio" name="q3" value="b" />&lt;post&gt;</li>
+                    <li><input type="radio" name="q3" value="c" />&lt;article&gt;</li>
+                    <li><input type="radio" name="q3" value="d" />&lt;main&gt;</li>
+
+                    <div id="ii" class="m-3">
+                        <input type="button" class="btn btn-info change second" id="change" data-url="/Student/quiz" value="NEXT" onclick="fun()">
+                    </div>
+                </ul>
+            </form>
+
+
+            <form class="questionForm" id="q4" data-question="4">
+                <h3 class="p-3">4. Which HTML5 tag is used for sidebar content ?</h3>
+                <ul class="m-3">
+                    <li><input type="radio" name="q4" value="a" />&lt;aside&gt;</li>
+                    <li><input type="radio" name="q4" value="b" />&lt;sidebar&gt;</li>
+                    <li><input type="radio" name="q4" value="c" />&lt;sub&gt;</li>
+                    <li><input type="radio" name="q4" value="d" />&lt;side&gt;</li>
+
+                    <div id="ii" class="m-3">
+                        <input type="button" class="btn btn-info change second" id="change" data-url="/Student/quiz" value="NEXT" onclick="fun()">
+                    </div>
+                </ul>
+            </form>
+
+
+            <form class="questionForm" id="q5" data-question="5">
+                <h3 class="p-3">5. Using canvas, which is used to color in rectangle ?</h3>
+                <ul class="m-3">
+                    <li><input type="radio" name="q5" value="a" />strokeStyle</li>
+                    <li><input type="radio" name="q5" value="b" />fillRect</li>
+                    <li><input type="radio" name="q5" value="c" />strokeFill</li>
+                    <li><input type="radio" name="q5" value="d" />RectFill</li>
+
+                    <div id="ii" class="m-3">
+                        <input type="button" class="btn btn-info change second" id="change" data-url="/Student/quiz" value="Show Result" onclick="fun()">
+                    </div>
+                </ul>
+            </form>
+
+
+        </main>
+    </div>
+
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div id="bb">
+
+
+    <div id="kk">
+
+
+        <div class="actualyoutube">
+            <h1>MS EXCEL</h1>
+
+            <iframe width="560" height="315" src="http://www.youtube.com/embed/-ujVQzTtxSg" frameborder="0" allowfullscreen></iframe>
+            <br />
+
+        </div>
+
+        <p>
+            Lecture By: Mr. Pavan Lalwani Tutorials Point India Private Limited
+        </p>
+    </div>
+
+    <div id="ii" style="">
+        <input type="button" class="btn btn-info change second" id="change" data-url="/Student/quiz" value="NEXT" onclick="fun()">
+
+
+    </div>
+
+</div>*@

@@ -1,0 +1,21 @@
+﻿
+ div.inline { float:left; }
+.clearBoth { clear:both; }
+.head{color:#17a2b8;}
+#one,#three{
+    width:500px; height:300px; border:dashed;
+     border-radius:10px 10px 10px 10px;
+     margin-top:60px; margin-left:20px;
+     padding-left:15px; padding-top:20px;
+     padding-right:10px;
+}
+
+#two,#four{width:500px; height:300px; border:dashed;
+            border-radius:10px 10px 10px 10px; margin-top:60px;
+            margin-left:50px; padding-left:15px; padding-top:20px;
+            padding-right:10px;}
+
+
+
+
+

@@ -1,0 +1,103 @@
+﻿
+
+<style>
+ 
+
+
+.contain{
+	position:absolute;
+	top:60px;
+	right:10%;
+	width:70%;
+	height:80%;
+	background: linear-gradient(90deg,#189086,#2f8198);
+background-image: linear-gradient(to bottom right,#02b3e4,#02ccba);	
+}
+
+.done{
+	width:100px;
+	height:100px;
+	position:relative;
+   
+	margin:auto;
+}
+.contain h1{
+	font-family: 'Julius Sans One', sans-serif;
+	font-size:1.4em;
+	color: #02b3e4;
+}
+
+.congrats{
+	position:relative;
+	left:50%;
+	top:50%;
+	max-width:800px;	transform:translate(-50%,-50%);
+	width:80%;
+	min-height:300px;
+	max-height:900px;
+	border:2px solid white;
+	border-radius:5px;
+	    box-shadow: 12px 15px 20px 0 rgba(46,61,73,.3);
+    background-image: linear-gradient(to bottom right,#02b3e4,#02ccba);
+	background:#fff;
+	text-align:center;
+	font-size:2em;
+	color: #189086;
+}
+
+.text{
+	position:relative;
+	font-weight:normal;
+	left:0;
+	right:0;
+	margin:auto;
+	width:80%;
+	max-width:800px;
+
+	font-family: 'Lato', sans-serif;
+	font-size:0.6em;
+
+}
+
+
+
+.regards{
+	font-size:.7em;
+   
+}
+
+
+
+	
+}
+</style>
+
+
+   <div class="contain">
+    <div class="congrats">
+        <h1>Congrat<span class="hide">ulation</span>s !</h1>
+        <div class="done">
+            <img src="~/image/461.jpg" width="100px" height="100px"/>
+            
+           
+        </div>
+        <div class="text">
+            <p>
+                THIS ACKNOWLEDGE THAT<br /> <span>@if (Session["FullName"] != null){<p>@Session["FullName"].ToString()</p>} </span> HAS SUCCESSFULLY COMPLETED THE<br /> MS EXCEL PROGRAM
+            </p>
+            
+        </div>
+        <p class="regards">MUAAZ ASIF <br />Instructor</p>
+    </div>
+</div>
+<script>
+
+    $(window).on("load", function () {
+
+        setTimeout(function () { $('.done').addClass("drawn"); }, 500)
+
+    });
+
+
+</script>
+
